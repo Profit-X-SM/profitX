@@ -1,0 +1,50 @@
+.bar {
+    position: relative;
+    height: 20px;
+    border-radius: 4px;
+    margin-bottom: 0.5em;
+  }
+  
+  /* Tooltip on hover */
+  .bar::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: -28px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 4px 8px;
+    font-size: 0.75em;
+    white-space: nowrap;
+    border-radius: 4px;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    pointer-events: none;
+    z-index: 10;
+  }
+  .bar:hover::after {
+    opacity: 1;
+  }
+  
+  /* Category colors + widths */
+  .bar.momentum {
+    background: linear-gradient(to right, #4caf50, #8bc34a);
+    width: 85%;
+  }
+  .bar.liquidity {
+    background: linear-gradient(to right, #2196f3, #03a9f4);
+    width: 65%;
+  }
+  .bar.social {
+    background: linear-gradient(to right, #ff9800, #ffc107);
+    width: 90%;
+  }
+  .bar.tokenomics {
+    background: linear-gradient(to right, #9c27b0, #ba68c8);
+    width: 70%;
+  }
+  .bar.credibility {
+    background: linear-gradient(to right, #f44336, #e57373);
+    width: 40%;
+  }

@@ -1,0 +1,122 @@
+<!DOCTYPE HTML>
+<!--
+	TXT by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Contact Us</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+		<div id="page-wrapper">
+
+			<!-- Nav -->
+			<nav id="nav">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li>
+						<a href="#">About Us</a>
+						<ul>
+							<li><a href="How_It_Works.html">How It Works</a></li>
+							<li><a href="#">Our Staffs</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Explore Tokens</a></li>
+					<li class="current"><a href="Create_Account.html">Create Account</a></li>
+					<li><a href="Contact_Us.html">Contact Us</a></li>
+				</ul>
+			</nav>
+			  
+
+			<!-- Main -->
+				<section id="main">
+					<div class="container">
+						<div class="row">
+							<div class="col-12">
+								<div class="content">
+
+									<!-- Content -->
+									<section class="box highlight">
+										<header>
+										  <h2>Account Portal</h2>
+										  <p>Create or access your anonymous ProfitX account</p>
+										</header>
+									  
+										<!-- Registration -->
+										<div id="register">
+										  <h3>Create New Account</h3>
+										  <p>Click below to generate your anonymous account code. Keep it safe!</p>
+										  <button onclick="generateAccount()">Generate Account</button>
+									  
+										  <!-- Hidden until generated -->
+										  <div id="accountDetails" style="display: none; margin-top: 1.5em;">
+											<p><strong>Your New Account Code:</strong></p>
+											<p id="newCode" style="font-family: monospace; font-size: 1.1em; word-break: break-all;"></p>
+									  
+											<input type="password" id="newPassword" placeholder="Set a password" style="margin-top: 1em;" />
+											<button onclick="registerAccount()" style="margin-top: 0.5em;">Register</button>
+											<p id="registerMsg"></p>
+										  </div>
+										</div>
+									  
+										<hr />
+									  
+										<!-- Login -->
+										<div id="login">
+										  <h3>Log In</h3>
+										  <input type="text" id="loginCode" placeholder="Enter your account code" />
+										  <input type="password" id="loginPassword" placeholder="Enter your password" />
+										  <button onclick="login()">Log In</button>
+										  <p id="loginMsg"></p>
+										</div>
+									  </section>
+									  
+									  
+			<!-- Footer -->
+				<footer id="footer">
+					<div class="container">
+						<div class="row gtr-200">
+							<div class="col-12">
+
+								<!-- Contact -->
+									<section>
+										<h2 class="major"><span>Get in touch</span></h2>
+										<ul class="contact">
+											<li><a class="icon brands fa-facebook-f" href="#"><span class="label">Facebook</span></a></li>
+											<li><a class="icon brands fa-twitter" href="#"><span class="label">Twitter</span></a></li>
+											<li><a class="icon brands fa-instagram" href="#"><span class="label">Instagram</span></a></li>
+											<li><a class="icon brands fa-dribbble" href="#"><span class="label">Dribbble</span></a></li>
+											<li><a class="icon brands fa-linkedin-in" href="#"><span class="label">LinkedIn</span></a></li>
+										</ul>
+									</section>
+
+							</div>
+						</div>
+
+						<!-- Copyright -->
+							<div id="copyright">
+								<ul class="menu">
+									<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+								</ul>
+							</div>
+
+					</div>
+				</footer>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/PasswordControlDemo.js"></script>
+	</body>
+</html>
