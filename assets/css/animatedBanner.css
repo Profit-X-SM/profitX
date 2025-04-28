@@ -1,0 +1,287 @@
+/* Animated Banner Styles for ProfitX */
+
+/* Banner container */
+#banner {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #0a0a25 0%, #1a1a3a 100%);
+    padding: 8em 0;
+    text-align: center;
+    color: #fff;
+  }
+  
+  /* Animated crypto symbols background */
+  #banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('images/crypto-symbols.png');
+    background-size: cover;
+    opacity: 0.07;
+    animation: scrollBackground 40s linear infinite;
+    z-index: 1;
+  }
+  
+  /* Particle overlay */
+  .particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+  }
+  
+  /* Content positioning */
+  #banner .content {
+    position: relative;
+    z-index: 3;
+    animation: fadeInUp 1.5s ease-out;
+  }
+  
+  /* Main heading */
+  #banner h2 {
+    font-size: 4.5em;
+    font-weight: 800;
+    margin-bottom: 0.2em;
+    text-shadow: 0 0 10px rgba(0, 120, 255, 0.5);
+    background: linear-gradient(to right, #6fbbff, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 0.05em;
+  }
+  
+  /* Tagline */
+  #banner p {
+    font-size: 1.5em;
+    margin-bottom: 1.5em;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 300;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* CTA Button */
+  #banner .button {
+    background: linear-gradient(to right, #4c94e8, #7232bd);
+    color: #fff;
+    border: none;
+    font-weight: 600;
+    padding: 1em 2.5em;
+    font-size: 1.1em;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(76, 148, 232, 0.4);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  #banner .button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 7px 20px rgba(76, 148, 232, 0.5);
+  }
+  
+  #banner .button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: 0.5s;
+  }
+  
+  #banner .button:hover::after {
+    left: 100%;
+  }
+  
+  /* Crypto icons floating animation */
+  .crypto-icon {
+    position: absolute;
+    opacity: 0.2;
+    z-index: 2;
+    animation-name: float;
+    animation-duration: 10s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
+  
+  /* Token Score Board Styling */
+  .box.highlight {
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .box.highlight:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+  }
+  
+  .box.highlight header {
+    background: linear-gradient(to right, #1a1a3a, #2a2a5a);
+    padding: 2em;
+    color: #fff;
+    border-radius: 12px 12px 0 0;
+  }
+  
+  .box.highlight header h2 {
+    font-size: 1.8em;
+    margin-bottom: 0.3em;
+    letter-spacing: 0.05em;
+  }
+  
+  /* Score bars */
+  .bar {
+    height: 10px;
+    background: #e0e0e0;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .bar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    border-radius: 5px;
+    animation: slideIn 1s ease-out forwards;
+    background-image: linear-gradient(to right, #4c94e8, #7232bd);
+  }
+  
+  .bar[data-tooltip]::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: -30px;
+    right: 0;
+    background: #333;
+    color: white;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .bar:hover::after {
+    opacity: 1;
+  }
+  
+  .bar.momentum::before { width: attr(data-tooltip); }
+  .bar.liquidity::before { width: attr(data-tooltip); }
+  .bar.social::before { width: attr(data-tooltip); }
+  .bar.tokenomics::before { width: attr(data-tooltip); }
+  .bar.credibility::before { width: attr(data-tooltip); }
+  
+  /* Token search */
+  #tokenSearch {
+    border-radius: 25px;
+    border: 2px solid #e0e0e0;
+    padding: 10px 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+  }
+  
+  #tokenSearch:focus {
+    outline: none;
+    border-color: #4c94e8;
+    box-shadow: 0 4px 15px rgba(76, 148, 232, 0.15);
+  }
+  
+  button[onclick="searchToken()"] {
+    background: linear-gradient(to right, #4c94e8, #7232bd);
+    color: white;
+    border-radius: 25px;
+    padding: 10px 25px;
+    font-weight: 600;
+    border: none;
+    box-shadow: 0 4px 15px rgba(76, 148, 232, 0.3);
+    transition: all 0.3s ease;
+  }
+  
+  button[onclick="searchToken()"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(76, 148, 232, 0.4);
+  }
+  
+  /* News and Blog sections */
+  .box.features, .box.blog {
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+  }
+  
+  .box.feature {
+    transition: transform 0.3s ease;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  }
+  
+  .box.feature:hover {
+    transform: translateY(-7px);
+  }
+  
+  .box.feature .image.featured {
+    border-radius: 8px 8px 0 0;
+    overflow: hidden;
+  }
+  
+  .box.feature h3 {
+    padding: 1em 1em 0.5em 1em;
+  }
+  
+  .box.feature p {
+    padding: 0 1em 1em 1em;
+  }
+  
+  /* Animations */
+  @keyframes scrollBackground {
+    0% { background-position: 0 0; }
+    100% { background-position: 100% 100%; }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-20px) rotate(5deg);
+    }
+    100% {
+      transform: translateY(0px) rotate(0deg);
+    }
+  }
+  
+  @keyframes slideIn {
+    0% { width: 0; }
+    100% { width: attr(data-tooltip); }
+  }
+  
+  /* Responsive adjustments */
+  @media screen and (max-width: 736px) {
+    #banner h2 {
+      font-size: 3em;
+    }
+    
+    #banner p {
+      font-size: 1.2em;
+    }
+  }
