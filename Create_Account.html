@@ -1,12 +1,7 @@
 <!DOCTYPE HTML>
-<!--
-	TXT by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 	<head>
-		<title>Contact Us</title>
+		<title>Create Account - ProfitX</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -43,23 +38,29 @@
 									<section class="box highlight">
 										<header>
 										  <h2>Account Portal</h2>
-										  <p>Create or access your anonymous ProfitX account</p>
+										  <p>Create or access your secure ProfitX account</p>
 										</header>
 									  
 										<!-- Registration -->
 										<div id="register">
 										  <h3>Create New Account</h3>
-										  <p>Click below to generate your anonymous account code. Keep it safe!</p>
-										  <button onclick="generateAccount()">Generate Account</button>
+										  <p>Click below to generate your unique account code. Keep it safe!</p>
+										  <button onclick="generateAccount()" class="button">Generate Account</button>
 									  
 										  <!-- Hidden until generated -->
 										  <div id="accountDetails" style="display: none; margin-top: 1.5em;">
 											<p><strong>Your New Account Code:</strong></p>
-											<p id="newCode" style="font-family: monospace; font-size: 1.1em; word-break: break-all;"></p>
-									  
-											<input type="password" id="newPassword" placeholder="Set a password" style="margin-top: 1em;" />
-											<button onclick="registerAccount()" style="margin-top: 0.5em;">Register</button>
-											<p id="registerMsg"></p>
+											<p id="newCode" style="font-family: monospace; font-size: 1.1em; word-break: break-all; background: #f7f7f7; padding: 1em; border-radius: 5px;"></p>
+                      
+											<div class="row gtr-50">
+												<div class="col-6 col-12-small">
+													<input type="password" id="newPassword" placeholder="Set a password" style="margin-top: 1em;" />
+												</div>
+												<div class="col-6 col-12-small">
+													<button onclick="registerAccount()" class="button alt" style="margin-top: 1em;">Register Account</button>
+												</div>
+											</div>
+											<p id="registerMsg" style="margin-top: 1em;"></p>
 										  </div>
 										</div>
 									  
@@ -68,13 +69,25 @@
 										<!-- Login -->
 										<div id="login">
 										  <h3>Log In</h3>
-										  <input type="text" id="loginCode" placeholder="Enter your account code" />
-										  <input type="password" id="loginPassword" placeholder="Enter your password" />
-										  <button onclick="login()">Log In</button>
-										  <p id="loginMsg"></p>
+                      <div class="row gtr-50">
+                        <div class="col-6 col-12-small">
+  										    <input type="text" id="loginCode" placeholder="Enter your account code" />
+                        </div>
+                        <div class="col-6 col-12-small">
+  										    <input type="password" id="loginPassword" placeholder="Enter your password" />
+                        </div>
+                        <div class="col-12">
+  										    <button onclick="login()" class="button">Log In</button>
+  										    <p id="loginMsg" style="margin-top: 1em;"></p>
+                        </div>
+                      </div>
 										</div>
 									  </section>
-									  
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
 									  
 			<!-- Footer -->
 				<footer id="footer">
@@ -100,7 +113,7 @@
 						<!-- Copyright -->
 							<div id="copyright">
 								<ul class="menu">
-									<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+									<li>&copy; ProfitX. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 								</ul>
 							</div>
 
@@ -117,6 +130,6 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			<script src="assets/js/PasswordControlDemo.js"></script>
+			<script src="assets/js/accountSystem.js"></script>
 	</body>
 </html>
