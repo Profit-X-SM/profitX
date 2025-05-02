@@ -8,6 +8,7 @@
 		<link rel="stylesheet" href="assets/css/animatedBanner.css" />
 		<!-- Add Font Awesome for additional icons -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+		<link rel="stylesheet" href="assets/css/TokenScoreStyle.css" />
 	</head>
 	<body class="homepage is-preload">
 		<div id="page-wrapper">
@@ -65,7 +66,7 @@
 											<input type="text" id="tokenSearch" placeholder="Enter token address or name..." style="width: 100%;" />
 										</div>
 										<div class="col-4 col-12-small">
-											<button onclick="searchToken()" style="width: 100%;">
+											<button id="tokenSearchButton" style="width: 100%;">
 												<i class="fas fa-search"></i> Search
 											</button>
 										</div>
@@ -87,30 +88,8 @@
 									</thead>
 									<tbody>
 									<!-- Tokens with animated bars -->
-									<tr>
-										<td>SHIBA</td>
-										<td><div class="bar momentum" data-tooltip="85%"></div></td>
-										<td><div class="bar liquidity" data-tooltip="65%"></div></td>
-										<td><div class="bar social" data-tooltip="90%"></div></td>
-										<td><div class="bar tokenomics" data-tooltip="70%"></div></td>
-										<td><div class="bar credibility" data-tooltip="40%"></div></td>
-									</tr>
-									<tr>
-										<td>NEWCOIN</td>
-										<td><div class="bar momentum" data-tooltip="55%"></div></td>
-										<td><div class="bar liquidity" data-tooltip="45%"></div></td>
-										<td><div class="bar social" data-tooltip="75%"></div></td>
-										<td><div class="bar tokenomics" data-tooltip="50%"></div></td>
-										<td><div class="bar credibility" data-tooltip="60%"></div></td>
-									</tr>
-									<tr>
-										<td>ALTFIN</td>
-										<td><div class="bar momentum" data-tooltip="75%"></div></td>
-										<td><div class="bar liquidity" data-tooltip="70%"></div></td>
-										<td><div class="bar social" data-tooltip="60%"></div></td>
-										<td><div class="bar tokenomics" data-tooltip="85%"></div></td>
-										<td><div class="bar credibility" data-tooltip="75%"></div></td>
-									</tr>
+									<tbody id="tokenTableBody">
+									
 									</tbody>
 								</table>
 								</div>
@@ -326,6 +305,21 @@
 
 		</div>
 
+		<div class="search-container" style="margin: 1.5em; padding: 1em; background: #f8f9fa; border-radius: 10px;">
+			<div class="row gtr-50 align-center">
+				<div class="col-8 col-12-small">
+					<input type="text" id="tokenSearch" placeholder="Enter token address or name..." style="width: 100%;" />
+				</div>
+				<div class="col-4 col-12-small">
+					<button style="width: 100%;">
+						<i class="fas fa-search"></i> Search
+					</button>
+				</div>
+			</div>
+		</div>
+
+
+		</div> <div id="score-popup" style="display: none;"></div>
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.dropotron.min.js"></script>
@@ -334,6 +328,9 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="assets/js/TokenAPIInterface.js"></script>
+
+				
 
 	</body>
 </html>
