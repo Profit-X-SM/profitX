@@ -15,14 +15,15 @@ Run the command: python -m http.server 8000 (use the same port you used before, 
 Wait until you see the Serving HTTP on ... port 8000 ... message. Leave this terminal running too.
 
 Website Link:
-Once both servers are running again, you access your website by going to this URL in your web browser: http://localhost:8000 (Replace 8000 with the port number you used for the python -m http.server command if you chose a different one).
+Once both servers are running again, you access your website by going to this URL in your web browser: 
+http://localhost:8000 (Replace 8000 with the port number you used for the python -m http.server command if you chose a different one).
 
 
 
 
 
 
-
+Template Credit:
 TXT by HTML5 UP
 html5up.net | @ajlkn
 Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
@@ -54,3 +55,6 @@ Credits:
 	Other:
 		jQuery (jquery.com)
 		Responsive Tools (github.com/ajlkn/responsive-tools)
+	
+	AI Generation:
+		Chatgpt, Claude
