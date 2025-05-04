@@ -7,14 +7,14 @@ Open a terminal window.
 Navigate to your project directory: cd "D:\Winter 25\FA591\profitX"
 Run the command: python TokenScorerAPI.py
 Wait until you see the output indicating it's running on http://127.0.0.1:5000 and the Debugger PIN appears. Leave this terminal running.
-Start the Simple HTTP Server:
 
+Start the Simple HTTP Server:
 Open a second, separate terminal window.
 Navigate to the same project directory: cd "D:\Winter 25\FA591\profitX"
 Run the command: python -m http.server 8000 (use the same port you used before, e.g., 8000).
 Wait until you see the Serving HTTP on ... port 8000 ... message. Leave this terminal running too.
-Website Link:
 
+Website Link:
 Once both servers are running again, you access your website by going to this URL in your web browser: http://localhost:8000 (Replace 8000 with the port number you used for the python -m http.server command if you chose a different one).
 
 
